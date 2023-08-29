@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+body, a {
+  color: white;
+}
+
+button {
+  border: 0;
+  background: none;
+}
+
+.ly-container {
+  background-color: #262626;
+}
+
+.ly-header {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem 0;
+}
+.ly-header img {
+  display: inline-block;
+  width: 30%;
+}
+.ly-header .btn-nav-open {
+  display: none;
+}
+
+.ly-nav {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #09203f;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+.ly-nav .btn-nav-close {
+  display: none;
+}
+.ly-nav ul {
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+}
+.ly-nav li {
+  flex: 1;
+  text-align: center;
+  height: 70px;
+}
+.ly-nav li.active a {
+  color: #82a4dd;
+}
+.ly-nav li.active a::before {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  height: 3px;
+  background-color: #82a4dd;
+}
+.ly-nav a {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  line-height: 70px;
+  color: white;
+  text-decoration: none;
+}
+
+.ly-content {
+  overflow: hidden;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem 2rem 1rem;
+}
+
+.ly-footer {
+  background-color: #232830;
+  padding: 2rem;
+}
+.ly-footer .container {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.ly-footer .info-desc {
+  color: white;
+}
+.ly-footer .info-desc li {
+  margin: 0.5rem 0;
+}
+.ly-footer .info-tel {
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.ly-footer .info-tel a {
+  display: inline-block;
+  margin: 0.5rem 0;
+  color: #c0392b;
+  text-decoration: none;
+}
+
+.msg-type-1 {
+  margin: 2rem 0;
+  text-align: center;
+  color: #cf2e2e;
+}
+
+.w-full {
+  margin: 1.5rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.w-full:first-child {
+  margin-top: 0;
+}
+.w-full img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.title-1 {
+  background-color: white;
+  margin: 0 -2rem 2rem;
+  padding: 0.5rem 1rem 0.5rem 2rem;
+  color: black;
+  font-size: 28px;
+}
+
+.title-2 {
+  position: relative;
+  padding-left: 56px;
+  color: #f6c342;
+  font-size: 2.5rem;
+  margin: 3rem 0 2rem;
+  line-height: 1;
+}
+.title-2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: url("/img/bg_title.png") no-repeat 50% 50%;
+  background-size: 100%;
+}
+
+.my-32 {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+@media screen and (max-width: 767px) {
+  .ly-header {
+    position: relative;
+  }
+  .ly-header .btn-nav-open {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    display: block;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+  }
+  .ly-header .btn-nav-open svg {
+    fill: black;
+    width: 36px;
+    height: 36px;
+  }
+  .ly-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    z-index: 100;
+    display: none;
+  }
+  .ly-nav .btn-nav-close {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    width: 36px;
+    height: 36px;
+    background-color: white;
+    display: block;
+  }
+  .ly-nav .btn-nav-close svg {
+    fill: black;
+    width: 36px;
+    height: 36px;
+  }
+  .ly-nav ul {
+    margin-top: 100px;
+    flex-direction: column;
+  }
+  .title-2 {
+    margin: 2rem 0 1rem;
+    font-size: 1.5rem;
+    padding-left: 30px;
+  }
+  .title-2::before {
+    width: 24px;
+    height: 24px;
+  }
+  .ly-footer .container {
+    flex-direction: column;
+  }
+}
+.material-symbols-outlined {
+  color: black;
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 200, "opsz" 48;
+}
+
+.p-0107 .text-1 {
+  margin: 4rem 0;
+  font-size: 48px;
+  line-height: 1.5;
+  color: #e74c3c;
+  text-align: center;
+}
+.p-0107 .text-2 {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+}
+.p-0107 .text-3 {
+  font-size: 1.2rem;
+}
+
+.form-row {
+  margin: 1rem 0;
+}
+.form-row label {
+  display: inline-block;
+  margin: 0.5rem 0;
+}
+.form-row input[type=text],
+.form-row input[type=tel] {
+  font-size: 1rem;
+  width: 100%;
+  height: 2rem;
+  padding: 0 0.5rem;
+  border: 1px solid #bdc3c7;
+  color: black;
+}
+
+button[type=submit] {
+  display: flex;
+  margin: 1rem auto;
+  font-size: 1rem;
+  color: white;
+  background-color: #3498db;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.box-agree {
+  border: 1px solid #bdc3c7;
+  padding: 1rem;
+}
+.box-agree li {
+  margin: 1rem 0;
+}
+.box-agree li p:first-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.box-agree p {
+  margin: 0.5rem 0;
+}
