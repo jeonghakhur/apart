@@ -12,7 +12,7 @@ btn_nav_close.addEventListener('click', function() {
 
 nav_link.forEach((item) => {
   item.addEventListener('click', function() {
-    if (window.matchMedia('(max-width: 768px').matches) {
+    if (window.matchMedia('(max-width: 768px)').matches) {
       setTimeout(function() {
         main_nav.style.display = 'none';
       }, 500)
