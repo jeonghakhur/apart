@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRef } from "react";
 import { MdMenu, MdClose } from "react-icons/md";
 import { usePathname } from "next/navigation";
 
@@ -40,6 +41,16 @@ const menu = [
 ];
 
 export default function Header() {
+  const navRef = useRef<HTMLDivElement>(null);
+  const handleNav = () => {
+    if (window.matchMedia("(max-width: 768px").matches) {
+      setTimeout(function () {
+        if (navRef.current) {
+          navRef.current.style.display = "none";
+        }
+      }, 500);
+    }
+  };
   const pathName = usePathname();
   return (
     <>
@@ -53,7 +64,7 @@ export default function Header() {
           <MdMenu />
         </button>
       </header>
-      <nav className='ly-nav'>
+      <nav className='ly-nav' ref={navRef}>
         <button type='button' className='btn-nav-close'>
           <MdClose />
         </button>
@@ -63,7 +74,7 @@ export default function Header() {
               key={index}
               className={`${pathName === item.href ? "active" : ""}`}
             >
-              <Link href={item.href} className='nav-link'>
+              <Link href={item.href} className='nav-link' onClick={handleNav}>
                 {item.name}
               </Link>
             </li>

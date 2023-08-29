@@ -9,14 +9,3 @@ btn_nav_open.addEventListener('click', function() {
 btn_nav_close.addEventListener('click', function() {
   main_nav.style.display = 'none';
 })
-
-nav_link.forEach((item) => {
-  item.addEventListener('click', function() {
-    if (window.matchMedia('(max-width: 768px').matches) {
-      setTimeout(function() {
-        main_nav.style.display = 'none';
-      }, 500)
-      
-    }
-  })
-})
