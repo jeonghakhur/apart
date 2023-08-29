@@ -1,64 +1,7 @@
 "use client";
-import axios from "axios";
 import Image from "next/image";
-import CryptoJs from "crypto-js";
-
-const serviceId = "ncp:sms:kr:308174329822:sms";
-const clientId = "wxJvIWyUVtqnHUJUPUag";
-const clientSecret = "1ve17LTDlT9VRMr26LjsrYdAxMcjrw602gl37Zqc";
-
-const method = "POST";
-const space = " ";
-const newLine = "\n";
-const url = `/sms/v2/services/${serviceId}/messages`;
-const url2 = `/sms/v2/services/${serviceId}/messages`;
-const date = Date.now().toString();
-
-const hmac = CryptoJs.algo.HMAC.create(CryptoJs.algo.SHA256, clientSecret);
-hmac.update(method);
-hmac.update(space);
-hmac.update(url2);
-hmac.update(newLine);
-hmac.update(date);
-hmac.update(newLine);
-hmac.update(clientId);
-const hash = hmac.finalize();
-const signature = hash.toString(CryptoJs.enc.Base64);
-console.log(signature);
-// 발신 번호와 수신 번호 설정
-const fromNumber = "01057605533";
-const toNumber = "01085891858";
-
-// 발송할 메시지 내용
-
-// SMS를 발송하는 함수
-function sendSMS() {
-  axios({
-    method,
-    url,
-    headers: {
-      "Content-Type": "application/json; charset=utf-8",
-      "x-ncp-apigw-timestamp": date,
-      "x-ncp-iam-access-key": clientId,
-      "x-ncp-apigw-signature-v2": signature,
-    },
-    data: {
-      type: "SMS",
-      contentType: "COMM",
-      countryCode: "82",
-      from: fromNumber,
-      content: message,
-      messages: [{ to: toNumber }],
-    },
-  })
-    .then((res) => console.log(res.data))
-    .catch((err) => console.log(err));
-}
-
-// SMS 발송 함수 호출
 
 export default function Home() {
-  // sendSMS();
   return (
     <div className='ly-content'>
       <div>
@@ -81,7 +24,7 @@ export default function Home() {
       <div>
         <h2 className='title-2'>위치도</h2>
         <figure className='w-full'>
-          <img src='/img/main_4.jpg' alt='' width={1200} height={700} />
+          <Image src='/img/main_4.jpg' alt='' width={1200} height={700} />
         </figure>
       </div>
       <div>

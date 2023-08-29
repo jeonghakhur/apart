@@ -1,13 +1,53 @@
+"use client";
+
+import Link from "next/link";
 import { MdMenu, MdClose } from "react-icons/md";
+import { usePathname } from "next/navigation";
+
+const menu = [
+  {
+    href: "/",
+    name: "HOME",
+  },
+  {
+    href: "/business",
+    name: "사업개요",
+  },
+  {
+    href: "/location",
+    name: "입지안내",
+  },
+  {
+    href: "/size",
+    name: "평형안내",
+  },
+  {
+    href: "/press",
+    name: "보도자료",
+  },
+  {
+    href: "/development",
+    name: "주변개발계획",
+  },
+  {
+    href: "/market",
+    name: "주변시장동향",
+  },
+  {
+    href: "/customer",
+    name: "관심고객등록",
+  },
+];
 
 export default function Header() {
+  const pathName = usePathname();
   return (
     <>
       <header className='ly-header'>
         <h1>
-          <a href='/'>
+          <Link href='/'>
             <img src='/img/logo.png' alt='' />
-          </a>
+          </Link>
         </h1>
         <button type='button' className='btn-nav-open'>
           <MdMenu />
@@ -18,30 +58,14 @@ export default function Header() {
           <MdClose />
         </button>
         <ul>
-          <li className='active'>
-            <a href='/'>HOME</a>
-          </li>
-          <li>
-            <a href='./business'>사업개요</a>
-          </li>
-          <li>
-            <a href='./location'>입지안내</a>
-          </li>
-          <li>
-            <a href='./size'>평형안내</a>
-          </li>
-          <li>
-            <a href='./press'>보도자료</a>
-          </li>
-          <li>
-            <a href='./development'>주변개발계획</a>
-          </li>
-          <li>
-            <a href='./market'>주택시장동향</a>
-          </li>
-          <li>
-            <a href='./customer'>관심고객등록</a>
-          </li>
+          {menu?.map((item, index) => (
+            <li
+              key={index}
+              className={`${pathName === item.href ? "active" : ""}`}
+            >
+              <Link href={item.href}>{item.name}</Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </>

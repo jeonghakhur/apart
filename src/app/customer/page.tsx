@@ -89,7 +89,7 @@ export default function Customer() {
         </p>
         <p className='text-2'>관심고객등록</p>
         <p className='text-3'>
-          "관심고객으로 등록하시면 관련정보를 안내해드립니다."
+          &quot;관심고객으로 등록하시면 관련정보를 안내해드립니다.&quot;
         </p>
         <form id='sms-form' onSubmit={handleSubmit}>
           <div className='form-row'>
