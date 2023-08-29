@@ -10,7 +10,7 @@ const clientSecret = "1ve17LTDlT9VRMr26LjsrYdAxMcjrw602gl37Zqc";
 const method = "POST";
 const space = " ";
 const newLine = "\n";
-const url = `https://sens.apigw.ntruss.com/sms/v2/services/${serviceId}/messages`;
+const url = `/sms/v2/services/${serviceId}/messages`;
 const url2 = `/sms/v2/services/${serviceId}/messages`;
 const date = Date.now().toString();
 
