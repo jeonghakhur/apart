@@ -28,7 +28,7 @@ const hash = hmac.finalize();
 const signature = hash.toString(CryptoJs.enc.Base64);
 
 const fromNumber = "01085891858";
-const toNumber = "01085891858";
+const toNumber = "01057605533";
 let message = "";
 
 function sendSMS() {
@@ -98,7 +98,7 @@ export default function Customer() {
               type='text'
               ref={nameRef}
               id='userName'
-              defaultValue='허정학'
+              placeholder='이름을 입력해주세요'
               required
             />
           </div>
@@ -107,10 +107,9 @@ export default function Customer() {
             <input
               type='tel'
               required
-              placeholder='구분자 숫자만 입력해주세요'
+              placeholder='전화번호는 숫자만 입력해주세요'
               id='userPhoneNumber'
               ref={phoneRef}
-              defaultValue='01085891858'
             />
           </div>
           <div className='form-row'>

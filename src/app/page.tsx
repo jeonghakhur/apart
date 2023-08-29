@@ -26,11 +26,10 @@ const hash = hmac.finalize();
 const signature = hash.toString(CryptoJs.enc.Base64);
 console.log(signature);
 // 발신 번호와 수신 번호 설정
-const fromNumber = "01085891858";
+const fromNumber = "01057605533";
 const toNumber = "01085891858";
 
 // 발송할 메시지 내용
-const message = "Hello, this is an SMS sent from Naver Cloud Platform!";
 
 // SMS를 발송하는 함수
 function sendSMS() {
