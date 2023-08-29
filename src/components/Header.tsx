@@ -63,7 +63,9 @@ export default function Header() {
               key={index}
               className={`${pathName === item.href ? "active" : ""}`}
             >
-              <Link href={item.href}>{item.name}</Link>
+              <Link href={item.href} className='nav-link'>
+                {item.name}
+              </Link>
             </li>
           ))}
         </ul>
