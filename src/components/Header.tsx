@@ -56,15 +56,18 @@ export default function Header() {
     <>
       <header className='ly-header'>
         <h1>
-          <Link href='/'>
-            <img src='/img/logo.png' alt='' />
+          <Link href='/' className='font-bold text-3xl flex flex-col'>
+            김포 북면
+            <span className='bg-white text-neutral-900 mt-2 p-2 inline-block mx-auto'>
+              우미 린 파크리브
+            </span>
           </Link>
         </h1>
-        <button type='button' className='btn-nav-open'>
+        {/* <button type='button' className='btn-nav-open'>
           <MdMenu />
-        </button>
+        </button> */}
       </header>
-      <nav className='ly-nav' ref={navRef}>
+      {/* <nav className='ly-nav' ref={navRef}>
         <button type='button' className='btn-nav-close'>
           <MdClose />
         </button>
@@ -80,7 +83,7 @@ export default function Header() {
             </li>
           ))}
         </ul>
-      </nav>
+      </nav> */}
     </>
   );
 }
