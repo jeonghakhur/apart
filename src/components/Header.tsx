@@ -10,30 +10,30 @@ const menu = [
     href: "/",
     name: "HOME",
   },
-  {
-    href: "/business",
-    name: "사업개요",
-  },
-  {
-    href: "/location",
-    name: "입지안내",
-  },
-  {
-    href: "/size",
-    name: "평형안내",
-  },
-  {
-    href: "/press",
-    name: "보도자료",
-  },
-  {
-    href: "/development",
-    name: "주변개발계획",
-  },
-  {
-    href: "/market",
-    name: "주변시장동향",
-  },
+  // {
+  //   href: "/business",
+  //   name: "사업개요",
+  // },
+  // {
+  //   href: "/location",
+  //   name: "입지안내",
+  // },
+  // {
+  //   href: "/size",
+  //   name: "평형안내",
+  // },
+  // {
+  //   href: "/press",
+  //   name: "보도자료",
+  // },
+  // {
+  //   href: "/development",
+  //   name: "주변개발계획",
+  // },
+  // {
+  //   href: "/market",
+  //   name: "주변시장동향",
+  // },
   {
     href: "/customer",
     name: "관심고객등록",
@@ -63,11 +63,11 @@ export default function Header() {
             </span>
           </Link>
         </h1>
-        {/* <button type='button' className='btn-nav-open'>
+        <button type='button' className='btn-nav-open'>
           <MdMenu />
-        </button> */}
+        </button>
       </header>
-      {/* <nav className='ly-nav' ref={navRef}>
+      <nav className='ly-nav' ref={navRef}>
         <button type='button' className='btn-nav-close'>
           <MdClose />
         </button>
@@ -83,7 +83,7 @@ export default function Header() {
             </li>
           ))}
         </ul>
-      </nav> */}
+      </nav>
     </>
   );
 }
