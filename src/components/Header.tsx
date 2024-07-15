@@ -54,21 +54,21 @@ export default function Header() {
   const pathName = usePathname();
   return (
     <>
-      <header className='ly-header'>
+      <header className="ly-header">
         <h1>
-          <Link href='/' className='font-bold text-3xl flex flex-col'>
-            김포 북면
-            <span className='bg-white text-neutral-900 mt-2 p-2 inline-block mx-auto'>
+          <Link href="/" className="font-bold text-3xl flex flex-col">
+            김포 북변
+            <span className="bg-white text-neutral-900 mt-2 p-2 inline-block mx-auto">
               우미 린 파크리브
             </span>
           </Link>
         </h1>
-        <button type='button' className='btn-nav-open'>
+        <button type="button" className="btn-nav-open">
           <MdMenu />
         </button>
       </header>
-      <nav className='ly-nav' ref={navRef}>
-        <button type='button' className='btn-nav-close'>
+      <nav className="ly-nav" ref={navRef}>
+        <button type="button" className="btn-nav-close">
           <MdClose />
         </button>
         <ul>
@@ -77,7 +77,7 @@ export default function Header() {
               key={index}
               className={`${pathName === item.href ? "active" : ""}`}
             >
-              <Link href={item.href} className='nav-link' onClick={handleNav}>
+              <Link href={item.href} className="nav-link" onClick={handleNav}>
                 {item.name}
               </Link>
             </li>
